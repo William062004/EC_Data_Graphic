@@ -75,8 +75,8 @@ const Chart = () => {
   const angles = data.map((entry) => (entry.value / totalValue) * maxAngle);
 
   return (
-      <div className="flex flex-col items-center justify-center h-screen">
-
+      <div className="w-full max-w-xs md:max-w-md lg:max-w-lg mx-auto p-4">
+        <ResponsiveContainer width="100%" height={400}>
           <PieChart width={400} height={400}>
             <Pie
                 activeShape={renderActiveShape}
@@ -163,6 +163,7 @@ const Chart = () => {
             />
             <Tooltip content={<CustomTooltip />} />
           </PieChart>
+        </ResponsiveContainer>
 
       </div>
   );
